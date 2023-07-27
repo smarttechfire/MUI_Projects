@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import CustomButton from "./CustomButton";
 import heroImg from "../media/hero_illustration.png";
 
+
+
+
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
