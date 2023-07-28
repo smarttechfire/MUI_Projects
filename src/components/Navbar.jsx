@@ -158,7 +158,6 @@ const Navbar = () => {
         backgroundColor="#0F1B4C"
         color="#fff"
         buttonText="Register"
-      
       />
     </Box>
   </NavbarContainer>;
