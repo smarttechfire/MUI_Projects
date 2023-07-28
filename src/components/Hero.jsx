@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import CustomButton from "./CustomButton";
 import heroImg from "../media/hero_illustration.png";
 
+
+
+
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -65,7 +68,7 @@ const Hero = () => {
             <img
               src={heroImg}
               alt="heroImg"
-              style={{ maxWidth: "100%", marginBottom: "2rem" }}
+              style={{ maxWidth: "100%"}}
             />
           </Box>
         </CustomBox>
