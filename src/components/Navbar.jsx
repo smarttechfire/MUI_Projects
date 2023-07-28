@@ -79,6 +79,7 @@ const Navbar = () => {
         <NavLink variant="body2">Services</NavLink>
         <NavLink variant="body2">Listed</NavLink>
         <NavLink variant="body2">Contact</NavLink>
+        <NavLink variant="body2">Gallery</NavLink>
       </NavbarLinksBox>
     </Box>
     <Box sx={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}> 
