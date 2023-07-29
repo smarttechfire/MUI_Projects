@@ -156,12 +156,12 @@ const Navbar = () => {
       </NavbarLinksBox>
     </Box>
     <Box sx={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}> 
-      <NavLink variant="body2">Sign Up</NavLink>
+    <Link className="linkRoute" to="/register"><NavLink variant="body2">Sign Up</NavLink></Link>
       <Link className="linkRoute" to="/login">
       <CustomButton 
         backgroundColor="#0F1B4C"
         color="#fff"
-        buttonText="Register" 
+        buttonText="Login" 
       />
       </Link>
     </Box>

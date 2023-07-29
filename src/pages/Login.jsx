@@ -1,8 +1,17 @@
-import { Avatar, Box, Container, Grid, TextField, Typography } from '@mui/material'
-import React from 'react'
-import LottieAnim from './LottieAnim';
-import { LockClockOutlined } from '@mui/icons-material';
+import { Avatar, Box, Container,  FormControlLabel, Grid, Stack, TextField, ThemeProvider, Typography, createTheme } from '@mui/material'
+import React, { useState } from 'react'
+import { CheckBox, LockClockOutlined } from '@mui/icons-material';
 import bg from '../assets/bgg.gif'
+import {  Link, useNavigate } from 'react-router-dom';
+import CustomButton from '../components/CustomButton';
+
+
+const darkTheme = createTheme({
+  palette:
+  {
+    mode:"dark",
+  }
+});
 
 const boxtstyle = {
   position: "absolute",
@@ -21,6 +30,8 @@ const center = {
   left:"37%",
 };
 export default function Login() {
+  const navigate = useNavigate();
+  
   return (
     <div style={{height:"84vh"}}>
         <Box sx={boxtstyle}>
@@ -40,35 +51,98 @@ export default function Login() {
 
           </Grid>
           <Grid item xs={12} sm={12} lg={6}>
+            
             <Box style={{
               background:"cover",
               height:"70vh",
               minHeight: "500px",
               backgroundColor:"#0F1B4C"
             }}>
-              <Container>
-                <Box height={35} />
-                <Box sx={center}>
-                  <Avatar sx={{ml: "35px", mb:"4px",bgcolor:"#ffffff", color:"#000"}}>
-                    <LockClockOutlined />
-                  </Avatar>
-                  <Typography component="h1" variant='h4' style={{color:"#fff"}}>
-                    Sign In
-                  </Typography>
-                </Box>
-                <Grid container spacing={1}>
-                  <Grid item xs={12} sx={{ml:"3rem",mr:"3rem"}}>
-                    <TextField 
-                      required
-                      fullWidth
-                      id='email'
-                      label='Username'
-                      name='email'
-                      autoComplete='email'
-                    />
+
+              <ThemeProvider theme={darkTheme}>
+                <Container>
+                  <Box height={35} />
+                  <Box alignContent={center}>
+                    <Avatar sx={{ml: "35px", mb:"4px",bgcolor:"#ffffff", color:"#000"}}>
+                      <LockClockOutlined />
+                    </Avatar>
+                    <Typography component="h1" variant='h4' style={{color:"#fff"}}>
+                      Sign In
+                    </Typography>
+                  </Box>
+                  <Box height={35} />
+                  <Grid container >
+                    <Grid item xs={12} sx={{ml:"3rem",mr:"3rem"}}>
+                      <TextField 
+                        required
+                        id='email'
+                        fullWidth
+                        label='Username'
+                        name='email'
+                        autoComplete='email'
+                        type='email'
+                        size="medium"
+                      />
+                      <br />
+                      <Box height={12} />
+                      <TextField 
+                        required
+                        id='password'
+                        fullWidth
+                        label='Password'
+                        name='password'
+                        autoComplete='new-password'
+                        type='password'
+                        size="medium"
+                      />
+                    </Grid>
+                    <Grid item xs={12} sx={{ml: "3em",mr:"3em"}}>
+                      <Stack direction="row" spacing={2} style={{color:"white",marginTop:"10px"}}>
+                        <Typography 
+                          variant='body1'
+                          component="span"
+                          onClick={() => {
+                            navigate("/reset-password");
+                          }}
+                          style={{marginTop:"10px",cursor:"pointer"}}
+                          >
+                          Forgot Password?
+                          </Typography>
+                      </Stack>
+                    </Grid>
+                    <Grid item xs={12} alignContent={center} style={{marginTop:"10px"}}>
+                      
+                        <CustomButton 
+                          backgroundColor="#fff"
+                          color="#0F1B4C"
+                          buttonText="Login"
+                          onClick={() => {
+                            navigate("/")
+                          }} 
+                        />
+                      
+                      
+                    </Grid>
+                    <Stack direction="row" spacing={2} sx={{ml:"10rem",color:"#fff"}}>
+                          <Typography
+                            variant='body1'
+                            component="span"
+                            style={{marginTop:"10px"}}
+                          >
+                            Not registered yet?{" "}
+                            <span
+                              style={{color: "#beb4fb",cursor:"pointer"}}
+                              onClick={() => {
+                                navigate("/register")
+                              }}
+                            >
+                              Click Here
+                            </span>
+                          </Typography>
+                      </Stack>
                   </Grid>
-                </Grid>
-              </Container>
+                </Container>
+              </ThemeProvider>
             </Box>
           </Grid>
         </Grid>

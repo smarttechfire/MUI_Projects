@@ -8,6 +8,7 @@ const CustomButton = ({
   heroBtn,
   guideBtn,
   getStartedBtn,
+  fullwidth,
 }) => {
   const CustomButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
@@ -20,7 +21,7 @@ const CustomButton = ({
     borderRadius: "7px",
     textTransform: "none",
     border: "2px solid transparent",
-    
+    fullwidth: fullwidth,
     "&:hover": {
       backgroundColor: color,
       color: backgroundColor,
