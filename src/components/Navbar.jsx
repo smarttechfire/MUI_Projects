@@ -10,6 +10,7 @@ import ContactsIcon from "@mui/icons-material/Contacts";
 import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
+import '../../src/index.css';
 import {
   Drawer,
   List,
@@ -20,6 +21,7 @@ import {
   styled,
 } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Navbar = () => {
 
    const [mobileMenu, setMobileMenu] = useState({
@@ -69,6 +71,7 @@ const Navbar = () => {
         </List>
     </Box>
   );
+
 
   const NavLink = styled(Typography)(({ theme }) => ({
     fontSize: "14px",
@@ -145,20 +148,22 @@ const Navbar = () => {
         <NavbarLogo src={logoImg} alt="logo" />
       </Box>
       <NavbarLinksBox>
-        <NavLink variant="body2">Home</NavLink>
-        <NavLink variant="body2">Features</NavLink>
-        <NavLink variant="body2">Services</NavLink>
-        <NavLink variant="body2">Listed</NavLink>
-        <NavLink variant="body2">Contact</NavLink>
+        <Link className="linkRoute" to="/"><NavLink variant="body2">Home</NavLink></Link>
+        <Link className="linkRoute" to="/login"><NavLink variant="body2">Features</NavLink></Link>
+        <Link className="linkRoute" to="/Features"><NavLink variant="body2">Services</NavLink></Link>
+        <Link className="linkRoute" to="/Features"><NavLink variant="body2">Listed</NavLink></Link>
+        <Link className="linkRoute" to="/Features"><NavLink variant="body2">Contact</NavLink></Link>
       </NavbarLinksBox>
     </Box>
     <Box sx={{display:"flex",alignItems:"center",justifyContent:"center",gap:"1rem"}}> 
       <NavLink variant="body2">Sign Up</NavLink>
+      <Link className="linkRoute" to="/login">
       <CustomButton 
         backgroundColor="#0F1B4C"
         color="#fff"
-        buttonText="Register"
+        buttonText="Register" 
       />
+      </Link>
     </Box>
   </NavbarContainer>;
 };

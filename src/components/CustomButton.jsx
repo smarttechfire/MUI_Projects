@@ -20,10 +20,12 @@ const CustomButton = ({
     borderRadius: "7px",
     textTransform: "none",
     border: "2px solid transparent",
+    
     "&:hover": {
       backgroundColor: color,
       color: backgroundColor,
       borderColor: backgroundColor,
+      textDecoration: "none",
     },
     [theme.breakpoints.down("md")]: {
       margin: (heroBtn || getStartedBtn) && theme.spacing(0, "auto", 3, "auto"),

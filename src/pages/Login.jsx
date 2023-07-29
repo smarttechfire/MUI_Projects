@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, Typography } from '@mui/material'
+import { Avatar, Box, Container, Grid, TextField, Typography } from '@mui/material'
 import React from 'react'
 import LottieAnim from './LottieAnim';
 import { LockClockOutlined } from '@mui/icons-material';
@@ -56,6 +56,18 @@ export default function Login() {
                     Sign In
                   </Typography>
                 </Box>
+                <Grid container spacing={1}>
+                  <Grid item xs={12} sx={{ml:"3rem",mr:"3rem"}}>
+                    <TextField 
+                      required
+                      fullWidth
+                      id='email'
+                      label='Username'
+                      name='email'
+                      autoComplete='email'
+                    />
+                  </Grid>
+                </Grid>
               </Container>
             </Box>
           </Grid>

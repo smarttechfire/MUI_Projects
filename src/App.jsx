@@ -11,8 +11,8 @@ function App() {
     <>
       <Box sx={{ background: "#E6F0FF", minHeight: "80vh" }}>
         <Container>
-          <Navbar />
           <BrowserRouter>
+          <Navbar />
             <Routes>
               <Route path="/" exact element = {<Hero />} />
               <Route path="/login" exact element={<Login />} />
