@@ -1,4 +1,4 @@
-import { Box, Container, Typography, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import React from "react";
 import CustomButton from "./CustomButton";
 import heroImg from "../media/hero_illustration.png";

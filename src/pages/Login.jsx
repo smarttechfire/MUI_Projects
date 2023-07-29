@@ -1,8 +1,7 @@
-import { Avatar, Box, Container,  FormControlLabel, Grid, Stack, TextField, ThemeProvider, Typography, createTheme } from '@mui/material'
-import React, { useState } from 'react'
-import { CheckBox, LockClockOutlined } from '@mui/icons-material';
+import { Avatar, Box, Container, Grid, Stack, TextField, ThemeProvider, Typography, createTheme } from '@mui/material'
+import {  LockClockOutlined } from '@mui/icons-material';
 import bg from '../assets/bgg.gif'
-import {  Link, useNavigate } from 'react-router-dom';
+import {   useNavigate } from 'react-router-dom';
 import CustomButton from '../components/CustomButton';
 
 
